@@ -1,0 +1,61 @@
+/* Audio Section Styles */
+.audio-section {
+    background-color: #f9f9f9; /* 연한 배경색 */
+    padding: 40px 20px;
+    text-align: center;
+}
+  
+.audio-section__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333; /* 제목 색상 */
+}
+  
+.audio-section__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 반응형 그리드 */
+    gap: 20px;
+    justify-items: center; /* 아이템 중앙 정렬 */
+}
+  
+.audio-item {
+    background-color: #ffffff; /* 아이템 배경 */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+.audio-item a {
+    display: block; /* 전체 아이템이 클릭 가능하도록 설정 */
+    text-decoration: none !important; /* 링크 밑줄 제거 강제 */
+    color: inherit !important; /* 텍스트 색상 상속 강제 */
+}
+
+.audio-item:hover {
+    transform: scale(1.05); /* Hover 시 확대 효과 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hover 시 그림자 */
+}
+  
+.audio-item img {
+    width: 100px; /* 이미지 크기 */
+    height: 100px;
+    margin-bottom: 10px;
+}
+  
+.audio-item p {
+    font-size: 14px;
+    color: #555; /* 텍스트 색상 */
+    margin: 0;
+}
+
+/* 추가적으로 모든 a 태그에서 밑줄 제거 */
+a {
+    text-decoration: none !important; /* 전역 설정 */
+}
+
+a:visited, a:hover, a:focus, a:active {
+    text-decoration: none !important; /* 다양한 상태에서 밑줄 제거 */
+}

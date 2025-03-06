@@ -1,0 +1,96 @@
+/* General Section Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .slider-section {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 20px 0;
+  }
+  
+  .slider-section__title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Slider Container */
+  .slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    height: 480px; /* 슬라이더 높이 고정 */
+    overflow: hidden;
+  }
+  
+  /* Individual Slide */
+  .slide {
+    position: absolute;
+    width: 100%; /* 슬라이드가 컨테이너에 맞게 조정 */
+    height: 100%;
+    display: none; /* 초기에는 모든 슬라이드를 숨김 */
+  }
+  
+  .slider .slide:nth-child(1) {
+    width: 790px; /* Slide 1 크기 */
+  }
+  
+  .slider .slide:nth-child(2),
+  .slider .slide:nth-child(3) {
+    width: 379.99px; /* Slide 2와 Slide 3 크기 */
+  }
+  
+  /* 이미지 및 내용 */
+  .slide img {
+    width: 100%; /* 슬라이드 너비에 맞게 채우기 */
+    height: 100%; /* 슬라이드 높이에 맞게 채우기 */
+    object-fit: cover; /* 이미지 비율 유지 */
+  }
+  
+  .slide__content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  }
+  
+  .slide__content p {
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  .slide__content h3 {
+    font-size: 20px;
+    margin: 5px 0 0;
+  }
+  
+  /* Slider Controls */
+  .slider__controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  
+  .slider__controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10%;
+  }
+  
+  .slider__controls button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }

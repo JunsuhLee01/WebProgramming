@@ -1,0 +1,149 @@
+/* Header Styles */
+.component.GlobalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000; /* 헤더 배경색 */
+    padding: 10px 20px;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* 상단 고정 */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* 헤더 그림자 */
+  }
+  
+  .GlobalHeader__Container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .GlobalHeader__Logo img {
+    height: 30px;
+  }
+  
+  /* Navigation Bar */
+  .nav {
+    display: flex;
+  }
+  
+  .nav__list {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* 메뉴 항목 간격 */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav__item {
+    position: relative; /* 드롭다운 위치 설정을 위해 */
+  }
+  
+  .nav__item a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav__item a:hover {
+    color: #ccc; /* Hover 시 회색으로 변경 */
+  }
+  
+  /* Dropdown Menu */
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* 메뉴 아래로 */
+    left: 0;
+    background-color: #FFFFFF; /* 밝은 배경 */
+    color: #000000;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+    padding: 10px 0;
+    border-radius: 8px; /* 둥근 모서리 */
+    min-width: 200px; /* 최소 너비 */
+    z-index: 1000;
+  }
+  
+  .dropdown-menu li {
+    list-style: none;
+    margin: 0;
+  }
+  
+  .dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+    transition: all 0.3s ease; /* 부드러운 효과 */
+  }
+  
+  .dropdown-menu li a:hover {
+    background-color: #878787; /* Hover 시 배경색 */
+    color: #fff; /* Hover 시 텍스트 색상 */
+    border-radius: 5px; /* Hover 시 둥근 효과 */
+  }
+  
+  /* Dropdown 활성화 */
+  .nav__item:hover .dropdown-menu {
+    display: block;
+    animation: fadeIn 0.3s ease; /* 부드러운 나타남 효과 */
+  }
+  
+  /* Dropdown 나타남 애니메이션 */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px); /* 살짝 위에서 내려옴 */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Icons Section */
+  .GlobalHeader__Icons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .icon-button img {
+    height: 25px;
+    filter: brightness(1); /* 기본 흰색 */
+  }
+  
+  .icon-button:hover img {
+    filter: brightness(0.8); /* Hover 시 약간 어둡게 */
+  }
+  
+  .icon-button:active {
+    transform: scale(0.95); /* 클릭 시 약간 축소 */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .GlobalHeader__Container {
+      flex-direction: column; /* 작은 화면에서는 세로 배치 */
+      align-items: flex-start;
+    }
+  
+    .nav__list {
+      flex-direction: column; /* 메뉴를 세로로 정렬 */
+      gap: 10px;
+    }
+  
+    .GlobalHeader__Icons {
+      margin-top: 10px;
+    }
+  }

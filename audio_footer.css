@@ -1,0 +1,207 @@
+/* Footer Layout */
+.gwx-sony-footer {
+    background: #000;
+    padding: 40px 20px;
+  }
+  
+  /* Footer 내부 레이아웃 */
+  .GlobalFooter__Inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .GlobalFooter__MainItem h3 {
+    color: #878792;
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  .GlobalFooter__MainItem ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .GlobalFooter__MainItem ul li {
+    margin-bottom: 10px;
+  }
+  
+  .GlobalFooter__MainItem ul li a {
+    color: #ccc;
+    text-decoration: none; /* 밑줄 제거 */
+    font-size: 14px;
+  }
+  
+  .GlobalFooter__MainItem ul li a:hover {
+    color: #fff; /* 링크 hover 시 흰색 */
+  }
+  
+  /* Social Button 스타일 */
+  .GlobalFooterSnsItem__Button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .GlobalFooterSnsItem__Button img {
+    width: 40px;
+    height: 40px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .GlobalFooterSnsItem__Button:hover img {
+    background-color: #FF4136; /* Hover 시 빨간색 배경 */
+    border-radius: 50%;
+  }
+  
+  /* 하단 링크 섹션 */
+  .GlobalFooter__Second {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .GlobalFooter__SecondLinkList {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .GlobalFooter__SecondLinkList li {
+    font-size: 14px;
+  }
+  
+  .GlobalFooter__SecondLinkList li a {
+    color: #ccc;
+    text-decoration: none; /* 밑줄 제거 */
+  }
+  
+  .GlobalFooter__SecondLinkList li a:hover {
+    color: #fff; /* Hover 시 흰색 */
+  }
+  
+  /* Footer Meta 스타일 */
+  .GlobalFooter__Meta {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+  }
+  
+  .GlobalFooter__MetaLinkList {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* 위치 조정: 하단 텍스트 */
+  .GlobalFooter__MetaWrapper {
+    display: flex;
+    justify-content: space-between; /* 좌우로 분리 */
+    align-items: center;
+  }
+  
+  .GlobalFooter__MetaWrapper .GlobalFooter__MetaLeft {
+    text-align: left;
+  }
+  
+  .GlobalFooter__MetaWrapper .GlobalFooter__MetaRight {
+    text-align: right;
+  }
+  
+  .GlobalFooter__MetaLinkList li {
+    font-size: 12px;
+  }
+  
+  .GlobalFooter__MetaLinkList li a {
+    color: #ccc;
+    text-decoration: none; /* 밑줄 제거 */
+  }
+  
+  .GlobalFooter__MetaLinkList li a:hover {
+    color: #fff; /* Hover 시 흰색 */
+  }
+  
+  .GlobalFooter__MetaLinkList li a[href="http://www.sony.co.kr/handler/ProductInfo-Start?PageName=jsp/footer/CF_policy.jsp"] {
+    color: #CD381B; /* 글씨 색상 변경 */
+  }
+  
+  .GlobalFooter__MetaLinkList li a[href="http://www.sony.co.kr/handler/ProductInfo-Start?PageName=jsp/footer/CF_policy.jsp"]:hover {
+    color: #FF7260; /* Hover 시 연한 빨간색 */
+  }
+  
+  .GlobalFooter__Copyright {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #777;
+    text-align: left;
+  }
+  
+  address {
+    font-style: normal;
+    font-size: 12px;
+    color: #777;
+    margin-top: 10px;
+    line-height: 1.5;
+    text-align: left; /* 왼쪽 정렬 */
+  }
+  
+  address a {
+    color: #ccc;
+    text-decoration: none; /* 밑줄 제거 */
+  }
+  
+  address a:hover {
+    color: #fff; /* Hover 시 흰색 */
+  }
+  
+  /* 툴팁 기본 스타일 */
+  .GlobalFooterSnsItem__Tooltip {
+    display: none; /* 기본적으로 숨김 */
+    position: absolute;
+    bottom: 40px; /* 버튼 위에 위치 (조정 가능) */
+    left: 50%; /* 버튼의 중앙에 맞춤 */
+    transform: translateX(-50%);
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 10;
+  }
+  
+  /* 화살표 */
+  .Tooltip__Arrow {
+    position: absolute;
+    bottom: -10px; /* 툴팁 하단에 위치 */
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* 툴팁 텍스트 스타일 */
+  .GlobalFooterSnsItem__TooltipHeading {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .GlobalFooterSnsItem__TooltipLink {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .GlobalFooterSnsItem__TooltipLink:hover {
+    text-decoration: underline;
+  }
